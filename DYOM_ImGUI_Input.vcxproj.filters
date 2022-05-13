@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_dx9.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_tables.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\ImGuiHook.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="VMTHooker\vmt.cpp">
+      <Filter>hook</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{54b05701-6db4-4f9e-a455-2680a1c5d3ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hook">
+      <UniqueIdentifier>{2c5519a9-b186-4279-9e1b-92ffa4052e38}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ImGui\imconfig.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_dx9.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_win32.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_internal.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\ImGuiHook.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_rectpack.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_textedit.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_truetype.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="VMTHooker\vmt.h">
+      <Filter>hook</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

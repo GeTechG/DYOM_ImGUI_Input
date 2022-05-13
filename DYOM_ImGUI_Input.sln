@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DYOM_ImGUI_Input", "DYOM_ImGUI_Input.vcxproj", "{EFED68ED-5B58-1D64-A496-CE091040FBB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|GTASA = Release|GTASA
+		zDebug|GTASA = zDebug|GTASA
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFED68ED-5B58-1D64-A496-CE091040FBB8}.Release|GTASA.ActiveCfg = Release GTASA|Win32
+		{EFED68ED-5B58-1D64-A496-CE091040FBB8}.Release|GTASA.Build.0 = Release GTASA|Win32
+		{EFED68ED-5B58-1D64-A496-CE091040FBB8}.zDebug|GTASA.ActiveCfg = zDebug GTASA|Win32
+		{EFED68ED-5B58-1D64-A496-CE091040FBB8}.zDebug|GTASA.Build.0 = zDebug GTASA|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
