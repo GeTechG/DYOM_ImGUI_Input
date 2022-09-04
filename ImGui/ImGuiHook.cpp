@@ -33,6 +33,8 @@ _Present oPresent;
 typedef HRESULT(WINAPI* _Reset)(IDirect3DDevice9*, D3DPRESENT_PARAMETERS*);
 _Reset oReset;
 
+extern void saveSnippets();
+
 void show_cursor(bool show)
 {
 	if (show) {
@@ -56,8 +58,8 @@ void show_cursor(bool show)
 		//ShowCursor(false);
 	}
 
-	(*reinterpret_cast<CMouseControllerState*>(0xB73418)).X = 0.0f;
-	(*reinterpret_cast<CMouseControllerState*>(0xB73418)).Y = 0.0f;
+	(*reinterpret_cast<CMouseControllerState*>(0xB73418)).x = 0.0f;
+	(*reinterpret_cast<CMouseControllerState*>(0xB73418)).y = 0.0f;
 	reinterpret_cast<void(*)()>(0x541BD0)(); // CPad::ClearMouseHistory
 	reinterpret_cast<void(*)()>(0x541DD0)(); // CPad::UpdatePads
 }
@@ -412,6 +414,7 @@ HRESULT WINAPI Present(IDirect3DDevice9* pDevice, const RECT* pSourceRect, const
 		if (ImGui::Begin("Text input", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
 			if (ImGui::BeginTabBar("##tabs")) {
 				if (ImGui::BeginTabItem("Input")) {
+					ImGui::Text("%d/100", UTF8_to_CP1251(buffer).size());
 					ImGui::SetKeyboardFocusHere();
 					ImGui::InputTextMultiline("##textInput", buffer, 200, ImVec2(450.0f, 200.0f), ImGuiInputTextFlags_CtrlEnterForNewLine + ImGuiInputTextFlags_CallbackAlways, inputCallback);
 
@@ -426,6 +429,7 @@ HRESULT WINAPI Present(IDirect3DDevice9* pDevice, const RECT* pSourceRect, const
 					}
 					if (ImGui::BeginChild("##snippetsInputs", ImVec2(450.0f, 200.0f))) {
 						for (int i = 0; i < hook.getSnippets().size(); ++i) {
+
 							ImGui::PushID(i);
 							ImGui::SetNextItemWidth(150.0f);
 							ImGui::InputTextWithHint("##snippetName", "snippet", hook.getSnippets().at(i).first.get(), 16);
@@ -440,6 +444,10 @@ HRESULT WINAPI Present(IDirect3DDevice9* pDevice, const RECT* pSourceRect, const
 							ImGui::PopID();
 						}
 						ImGui::EndChild();
+					}
+					if (ImGui::Button("Save")) {
+						saveSnippets();
+						CMessages::AddMessage(const_cast<char*>("Snippets saved"), 1000, 1, true);
 					}
 					ImGui::EndTabItem();
 				}

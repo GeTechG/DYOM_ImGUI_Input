@@ -44,9 +44,6 @@ public:
 	        CTheScripts::ScriptSpace = *reinterpret_cast<char**>(0x44CA42 + 2);
             loadSnippets();
         };
-        Events::shutdownRwEvent.before += [] {
-	        saveSnippets();
-        };
 
         Events::gameProcessEvent += [] {
             static std::string cheatCode = "IMINPUT";
