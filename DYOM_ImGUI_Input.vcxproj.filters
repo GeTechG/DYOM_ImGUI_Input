@@ -23,11 +23,21 @@
     <ClCompile Include="ImGui\imgui_widgets.cpp">
       <Filter>ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="ImGui\ImGuiEditor.cpp" />
     <ClCompile Include="ImGui\ImGuiHook.cpp">
-      <Filter>ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="VMTHooker\vmt.cpp">
       <Filter>hook</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\kiero\kiero.cpp">
+      <Filter>hook\kiero</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\kiero\minhook\src\trampoline.c">
+      <Filter>hook\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\kiero\minhook\src\buffer.c">
+      <Filter>hook\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\kiero\minhook\src\hook.c">
+      <Filter>hook\minhook</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,7 +48,13 @@
       <UniqueIdentifier>{54b05701-6db4-4f9e-a455-2680a1c5d3ef}</UniqueIdentifier>
     </Filter>
     <Filter Include="hook">
-      <UniqueIdentifier>{2c5519a9-b186-4279-9e1b-92ffa4052e38}</UniqueIdentifier>
+      <UniqueIdentifier>{219a972c-9bb2-45c9-b6fc-1d2e08b02118}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hook\kiero">
+      <UniqueIdentifier>{515ee315-f072-4053-b6a0-6899af54e598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hook\minhook">
+      <UniqueIdentifier>{b5ed25f0-abb4-4748-ad6d-b769d7e91649}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,9 +73,6 @@
     <ClInclude Include="ImGui\imgui_internal.h">
       <Filter>ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="ImGui\ImGuiHook.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
     <ClInclude Include="ImGui\imstb_rectpack.h">
       <Filter>ImGui</Filter>
     </ClInclude>
@@ -69,8 +82,18 @@
     <ClInclude Include="ImGui\imstb_truetype.h">
       <Filter>ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="VMTHooker\vmt.h">
+    <ClInclude Include="ImGui\ImGuiEditor.h" />
+    <ClInclude Include="ImGui\ImGuiHook.h">
       <Filter>hook</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\kiero\kiero.h">
+      <Filter>hook\kiero</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\kiero\minhook\src\trampoline.h">
+      <Filter>hook\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\kiero\minhook\src\buffer.h">
+      <Filter>hook\minhook</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
